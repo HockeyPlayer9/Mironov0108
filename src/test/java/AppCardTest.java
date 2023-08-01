@@ -25,7 +25,7 @@ public class AppCardTest {
         $("[data-test-id= 'name'] input").setValue("Иванов Иван");
         $("[data-test-id= 'phone'] input").setValue("+79000000000");
         $("[data-test-id= 'agreement']").click();
-        $("button").click();
+        $(".button").click();
         $(".notification__content")
                 .shouldBe(Condition.visible, Duration.ofSeconds(15))
                 .shouldHave(Condition.exactText("Встреча успешно забронирована на " + currentDate));
